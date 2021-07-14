@@ -4,21 +4,25 @@ Choose the best restaurant based on restaurants.csv
 ### USAGE
 python chooserestaurant.py -n Bar -r 3 -d 5 -p 20 -c Chinese
 
--n or --name
+-n or --name=
 Name of the Restaurant
 
--r or --rating
+-r or --rating=
 Minimum rating of the restaurant
 
--d or --distance
+-d or --distance=
 Maximum distance to the restaurant
 
--p or --price
+-p or --price=
 Maximum medium price of the restaurant
 
 -c or --cuisine
 Restaurant's cuisine's type
 
+####
+python chooserestaurant.py --name=Bar --rating=3 --distance=5 --price=20 --cuisine=Chinese
+python chooserestaurant.py --name=Bar --rating=3
+python chooserestaurant.py
 
 ### Code
 Original code found at Choose Restaurant.ipynb

@@ -12,7 +12,7 @@ name, rating, distance, cuisine, price = '', None, None, '', None
 # Receive data from params
 argumentList = sys.argv[1:]
 options = "n:r:d:c:p:"
-long_options = ["name=", "rating", "distance", "cuisine", "price"]
+long_options = ["name=", "rating=", "distance=", "cuisine=", "price="]
 try:
     # Parsing argument
     arguments, values = getopt.getopt(argumentList, options, long_options)
@@ -33,14 +33,16 @@ except getopt.error as err:
     # output error, and return with an error code
     print (str(err))
 
+# Print query
 print("Query: \nname=%s \nrating=%s \ndistance=%s \ncuisine=%s \nprice=%s " % (name, rating, distance, cuisine, price))
 
-# In[2]:
 
 
+# To print errors
 def errorMsg( msg ):
     return {'status':0, 'message':msg }
 
+# Main function, used to wrangle the data
 def searchRestaurants( name, rating, distance, cuisine, price ):
     # Prevent errors caused empty values in integer params
     if rating=='': rating = None
@@ -96,9 +98,7 @@ def searchRestaurants( name, rating, distance, cuisine, price ):
     return {'status':1, 'data':restaurants }
 
 
-# In[3]:
-
-
+#example
 #result = searchRestaurants( 'Bar', 3, 5, 'It', 20 )
 result = searchRestaurants( name, rating, distance, cuisine, price )
 
@@ -108,13 +108,6 @@ else:
     print(result['message'])
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
