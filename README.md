@@ -19,9 +19,11 @@ Maximum medium price of the restaurant
 -c or --cuisine
 Restaurant's cuisine's type
 
-####
+#### Examples
 python chooserestaurant.py --name=Bar --rating=3 --distance=5 --price=20 --cuisine=Chinese
+
 python chooserestaurant.py --name=Bar --rating=3
+
 python chooserestaurant.py
 
 ### Code
